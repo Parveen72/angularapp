@@ -1,0 +1,19 @@
+<p>SINGER INFORMATION</p>
+   
+            <table style="border: 1px solid black;">
+                <tr>
+                <th>SingerName</th>
+                <th>NoOfSongs</th>
+                </tr>
+                <tr>
+                    <div *ngFor = "let obsinger of array_of_singer">
+                    <div *ngIf = "(obsinger.noOfSongs>50)">
+                
+                <td>{{obsinger.NameOfSinger}}</td>
+                <td>{{obsinger.noOfSongs}}</td>
+                </div>
+                </div>
+                </tr>
+            </table>
+        
+

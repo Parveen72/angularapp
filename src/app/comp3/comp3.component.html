@@ -1,0 +1,16 @@
+<h1><span>Cmd through Created Component :</span> Wel-Come to Angular!</h1>
+<h1>1.One Way DataBinding</h1>
+<h3>a.  Event Binding (HTML --> Typescript)</h3>
+<button (click)="show()">click Me!</button>
+<h3>b.  Interpolation (Typescript --> HTML)</h3>
+{{name}}
+<h3>c.  Prototype (Typescript --> HTML)</h3>
+
+<div [innerHTML]="description"></div>
+<img [src]= "imageUrl" height="200px" width="200px">
+<h1>2.Two Way DataBinding</h1>
+
+<div>
+    User Name : <input type="text" [(ngModel)]="firstName">
+</div>
+<div>{{firstName}}</div>

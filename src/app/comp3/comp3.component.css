@@ -1,0 +1,16 @@
+h1{
+    font-size: 20px;
+    font-family: cursive;
+    color: rgb(69, 8, 126);
+    font-weight: bold;
+}
+span{
+    font-size: 22px;
+    font-family: cursive;
+    color: rgb(126, 8, 8);
+}
+h3{
+    font-size: 18px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(22, 1, 1)
+}
