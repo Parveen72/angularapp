@@ -1,0 +1,13 @@
+
+
+<div style="margin-top: 50px; margin-left :100px; ">
+    <input type="text" class="formContol" style="color: blue;" placeholder="Enter Here...." name="Post" [(ngModel)]="Post">
+
+
+
+<span style="margin-left:50px ">
+    <button (click)="addData(Post)" class="btn btn-primary">Click To AddData</button>
+</span>
+</div>
+
+<app-pchild [ChildArray]="ParentArray"></app-pchild>

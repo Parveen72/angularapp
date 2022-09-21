@@ -1,0 +1,16 @@
+
+<table class="table table-striped " style="margin-top: 20px; width: 500px; color:blueviolet;margin-left:100px;">
+    <thead style="font-size:22px; font-family: cursive; color: rgb(88, 9, 161); ">
+        <tr>
+            <th>Enterd Data</th>
+            <th>Remove Option</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let p of ChildArray">
+            <td>{{p}}</td>
+            <td><button class="btn btn-danger" (click)="RemoveData(p)">Remove</button></td>
+        </tr>
+    </tbody>
+</table>
+
