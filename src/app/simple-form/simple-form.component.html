@@ -1,0 +1,53 @@
+<p>simple-form works!</p>
+<div class="container">
+    <div class="row justify-content-center" >
+        <div class="col-md-6 text-left rounded shadow py-5 " style="background-color:rgb(192, 140, 240) ;">
+            <form #myForm ="ngForm" (ngSubmit)="OnSubmit(myForm)">
+                <h3><strong>Student Registretion Form</strong></h3><hr>
+                <table class="form-group" class="spc">
+                    <tr>
+                        <td><label for="rollno">Roll No:</label></td>
+                        <td><input type="text" required class="form-control" id="rollno" name="rollno" ngModel placeholder="enter roll no..."></td>
+                    </tr>   
+
+                    <tr>
+                        <td><label for="stdname">Student Name:</label></td>
+                        <td><input type="text" class="form-control" id="stdname" name="stdname" ngModel placeholder="enter name ..."></td>
+                    </tr> 
+
+                    <tr>
+                        <td><label for="email">EmailId:</label></td>
+                        <td><input type="text" class="form-control" id="email" name="email" ngModel placeholder="enter email ..."></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Select Gender:</label></td>
+                        <td>
+                            <input type="radio" id="gender" name="gender">
+                            <label>Male</label>
+                            <input type="radio"id="gender" name="gender">
+                            <label>Female</label>
+                            <input type="radio"id="gender" name="gender">
+                            <label>Other</label>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td><label for="mob">MobileNo:</label></td>
+                        <td><input type="text" class="form-control" id="mob" name="mob" ngModel placeholder="10 digit..."></td>
+                    </tr> 
+                    <tr>
+                        <td><label for="course">Course Name:</label></td>
+                        <td><select>
+                            <option *ngFor="let s of sub">{{s}}</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" class="btn mt-3" [disabled]="!myForm.valid">Submit</button></td>
+                        <td><button type="reset" class="btn  mt-3">Reset</button></td>
+
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </div>
+</div>

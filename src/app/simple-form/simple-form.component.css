@@ -1,0 +1,35 @@
+
+.table{
+    border-collapse: collapse;
+
+}
+.spc{
+    border-collapse:separate;
+    border-spacing:0 15px;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+td{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(32, 4, 56);
+    font-family: 'Times New Roman', Times, serif;
+}
+.form-control{
+    background-color: rgb(239, 230, 248);
+    
+}
+.btn{
+    font-size: 20px;
+    color:white;
+    background-color: rgb(61, 22, 97);
+    width: 120px;
+    align-items:center;
+}
+h3{
+    margin-top: -20px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(26, 11, 41);
+}
