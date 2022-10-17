@@ -1,0 +1,62 @@
+<p>myreactiveform works!</p>
+<div class="container">
+    <div class="row justify-content-center" >
+        <div class="col-md-6 text-left rounded shadow py-5 ">
+            <form [formGroup]="myReactiveForm" (ngSubmit)="OnSubmit()">
+                <h3><strong>Reactive Form</strong></h3>
+            <div formGroupName="userDetail">
+                <div class = "form-group" >
+                    <label for="username">UserName : </label> 
+                    <input type="text" 
+                    class="form-control" 
+                    formControlName="username" 
+                    id="username">
+                    <small class="text-denger" 
+                    *ngIf="!myReactiveForm.get('userDetail.username').valid &&
+                     myReactiveForm.get('userDetail.username').touched">
+                 
+                    <span *ngIf="myReactiveForm.get('userDetail.username').errors[reuired]">Usrname Is Required</span></small> 
+                </div>
+                <div class = "form-group">
+                
+                    <label for="email">EmailId : </label> 
+                    <input type="text" 
+                    class="form-control" 
+                    formControlName="email" 
+                    id="email">  
+                </div>
+            </div>
+                <div class="form-group">
+                    <label for="course">Course</label>
+                    <select class="form-control" formControlName="course">
+                        <option value="Angular">Angular</option>
+                        <option value=".Net">.Net</option>
+                        <option value="java">Java</option>
+                    </select>
+                </div>
+                <div class="form-group" formArrayName="skills">
+                    <label>Skills</label>
+                    <!-- <input type="text" style="margin-top:3px;  width:450px;" placeholder="skills...."> -->
+                    <ng-container *ngFor="let skl of myReactiveForm.get('skills').controls; index as i">
+                  <div> <input type="text" style="margin-top:3px;  width:450px;" placeholder="skills...." formControlName="{{i}}">      
+                    <span><button class="btn btn-success btn-sm " style="margin-left:2px ;" (click)="AddSkills()"><strong>+</strong></button></span>
+
+                    <span><button class="btn btn-danger btn-sm " style="margin-left:2px ;"(click)="RemoveSkills(i)"><strong>-</strong></button></span>           
+                 </div>
+                    </ng-container>
+                
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                <!-- <button class="btn btn-info mt-3 btn-add" (click)="AddSkills()"><i>+</i>Add</button>            -->
+
+            <div *ngIf="showdata">
+                <p>UserName : <strong>{{myReactiveForm.get('userDetail.username').value}}</strong></p>
+                <p>EmailId  : <strong>{{myReactiveForm.get('userDetail.email').value}}</strong></p>
+                <p>Course   : <strong>{{myReactiveForm.get('course').value}}</strong></p>
+            </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+

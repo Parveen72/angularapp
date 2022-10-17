@@ -1,0 +1,27 @@
+<p>ngclass works!</p>
+<div>
+    <table class="table" style="width:600px ;">
+        <thead class="thead-dark">
+            <tr>
+                <th>EmployeeID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Company</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let emp of employee ">
+            <tr [ngClass]="{
+                'text-primary':emp.Company==='Wipro',
+                'text-warning':emp.Salary>=75000,
+                'text-danger':emp.Department==='Finance'
+            }">
+                <td>{{emp.Emp_ID}}</td>
+                <td>{{emp.Emp_Name}}</td>
+                <td>{{emp.Department}}</td>
+                <td>{{emp.Salary}}</td>
+                <td>{{emp.Company}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

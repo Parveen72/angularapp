@@ -1,0 +1,30 @@
+
+<div class="container" style="margin-top: 20px;">
+    <div class="col-md-12" [ngSwitch]="selectProduct">
+        <h2 class ="text-success" *ngSwitchDefault>Please Select Value </h2>
+
+        <h2 class ="text-success" *ngSwitchCase="'India'">India</h2>
+        <h2 class ="text-success" *ngSwitchCase="'U.S.'">U.S.</h2>
+        <h2 class ="text-success" *ngSwitchCase="'Caneda'">Canada</h2>
+        <h2 class ="text-success" *ngSwitchCase="'Japan'">Japan</h2>
+
+        
+    </div>
+
+
+
+
+    <div class="col-md-4">
+        <select class="form-control" (change)="showProduct($event)">
+            <option value="Default" class="op">Select Value</option>
+
+            <option value="India" class="op">India</option>
+            <option value="U.S." class="op">U.S.</option>
+            <option value="Caneda" class="op">Caneda</option>
+            <option value="Japan" class="op">Japan</option>
+
+        </select>
+    </div>
+    
+</div>
+

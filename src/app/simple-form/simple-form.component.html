@@ -7,26 +7,28 @@
                 <table class="form-group" class="spc">
                     <tr>
                         <td><label for="rollno">Roll No:</label></td>
-                        <td><input type="text" required class="form-control" id="rollno" name="rollno" ngModel placeholder="enter roll no..."></td>
+                        <td><input ngModel type="text" required class="form-control" id="rollno" name="rollno" ngModel placeholder="enter roll no..."></td>
                     </tr>   
 
                     <tr>
                         <td><label for="stdname">Student Name:</label></td>
-                        <td><input type="text" class="form-control" id="stdname" name="stdname" ngModel placeholder="enter name ..."></td>
+                        <td><input ngModel type="text" class="form-control" id="stdname" name="stdname" ngModel placeholder="enter name ..."></td>
                     </tr> 
 
                     <tr>
                         <td><label for="email">EmailId:</label></td>
-                        <td><input type="text" class="form-control" id="email" name="email" ngModel placeholder="enter email ..."></td>
+                        <td><input (blur)="checkemail(email)" #email="ngModel" type="text" class="form-control" id="email" name="email" ngModel placeholder="enter email ..."></td>
+                        <small class="text-danger" *ngIf="evalidater">Invalide Email</small> 
+                        <small class="text-denger" *ngIf="!email.valid && email.touched">Invalide Email</small>
                     </tr>
                     <tr>
-                        <td><label for="gender">Select Gender:</label></td>
+                        <td><label for="gender">Gender:</label></td>
                         <td>
-                            <input type="radio" id="gender" name="gender">
+                            <input  type="radio" id="gender" name="gender" value="Male" ngModel>
                             <label>Male</label>
-                            <input type="radio"id="gender" name="gender">
+                            <input  type="radio"id="gender" name="gender" value="Female" ngModel>
                             <label>Female</label>
-                            <input type="radio"id="gender" name="gender">
+                            <input type="radio"id="gender" name="gender" value="Other">
                             <label>Other</label>
                         </td>
                     </tr> 
@@ -36,9 +38,13 @@
                     </tr> 
                     <tr>
                         <td><label for="course">Course Name:</label></td>
-                        <td><select>
-                            <option *ngFor="let s of sub">{{s}}</option>
+                        <td><select name="course" id="course" [ngModel]="defalultValue">
+                            <option  *ngFor="let s of sub">{{s}}</option>
                         </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="date"> Date :</label></td>
+                        <td><input  type="date" name="date" #date="ngModel" ngModel id="date" class="form-control" min="{{currentDate | date:'yyyy-MM-dd'}}"></td>
                     </tr>
                     <tr>
                         <td><button type="submit" class="btn mt-3" [disabled]="!myForm.valid">Submit</button></td>
@@ -47,7 +53,38 @@
                     </tr>
 
                 </table>
+
+                <table  class="table table-bordered" *ngIf="showForm">
+                    <thead>
+                        <tr>
+                        <th>RollNo</th>
+                        <th>Name</th>
+                        <th>EmailId</th>
+                        <th>Gender</th>
+                        <th>MobileNo</th>
+                        <th>Course</th>
+                        
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{userData.rollno}}</td>
+                            <td>{{userData.stdname}}</td>
+                            <td>{{userData.email}}</td>
+                            <td>{{userData.gender}}</td>
+
+                            <td>{{userData.mob}}</td>
+                            <td>{{userData.course}}</td>
+
+
+                        </tr>
+                    </tbody>
+                </table>
             </form>
+
         </div>
     </div>
+
+
 </div>

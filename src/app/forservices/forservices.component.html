@@ -1,0 +1,27 @@
+<p>forservices works!</p>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>EmailId</th>
+                <th>PhoneNo</th>
+                <th>Company</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr *ngFor="let ob of userdata">
+                    <td>{{ob.id}}</td>
+                    <td>{{ob.name}}</td>
+                    <td>{{ob.email}}</td>
+                    <td>{{ob.phone}}</td>
+                    <td>{{ob.company.name}} 
+                        {{ob.company.catchPhrase}}
+                        {{ob.company.bs}}</td>
+
+                </tr>
+            </tbody>
+        
+    </table>
+</div>

@@ -1,0 +1,38 @@
+
+<div class="box" style="border:1px solid black;">
+    Roll Number :
+    <input type="text" placeholder="Enter Roll No......" #rn style="margin-top:5px;"><br>
+
+    Student Name:
+    <input type="text" placeholder="Enter Name....." #stdname style="margin-top:5px;"><br>
+
+    Percentage :
+    <input type="text" placeholder="Enter percentage......" #per style="margin-top:5px;"><br>
+
+    Result :
+    <input type="text" placeholder="Enter res......" #res style="margin-top:5px;"><br>
+
+    <button class="btn btn-primary" (click)="onClick(rn,stdname,per,res)" style="margin-top:5px;">Submit</button><br>
+
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th>Roll No.</th>
+                <th>Student Name</th>
+                <th>Percentage</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{std.rn}}</td>
+                <td>{{std.sname}}</td>
+                <td>{{std.per}}</td>
+                <td>{{std.res}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+ </div>

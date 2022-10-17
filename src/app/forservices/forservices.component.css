@@ -1,0 +1,14 @@
+table thead {
+    font-size: 18px;
+    font-weight: 700px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(235, 222, 248);
+    color: rgb(43, 6, 78);
+}
+table tbody{
+    font-size: 16px;
+    font-weight: 700px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(221, 211, 231);
+    color: rgb(71, 10, 128);
+}

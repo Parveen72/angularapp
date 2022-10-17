@@ -1,19 +1,48 @@
-<p>SINGER INFORMATION</p>
-   
-            <table style="border: 1px solid black;">
+<p> ALL SINGER INFORMATION</p>
+<div>
+    <table class="table table" style="color:rgb(16, 161, 111) ; width: 200px;">
+        <thead>
+        <tr>
+        <th>SingerName</th>
+        <th>NoOfSongs</th>
+        </tr>
+    </thead>
+    <tbody  *ngFor = "let obsinger of array_of_singer" >
+        
+            <tr>
+        
+        <td>{{obsinger.NameOfSinger}}</td>
+        <td>{{obsinger.noOfSongs}}</td>
+        
+        
+        </tr>
+    </tbody>
+    </table>
+</div> 
+
+
+<p> ALL SINGER WHo SING MORE THAN 50 Songs INFORMATION</p>
+
+
+
+   <div>
+            <table class="table" style="color:rgb(53, 1, 8) ; width: 200px;">
+                <thead>
                 <tr>
                 <th>SingerName</th>
                 <th>NoOfSongs</th>
                 </tr>
-                <tr>
-                    <div *ngFor = "let obsinger of array_of_singer">
-                    <div *ngIf = "(obsinger.noOfSongs>50)">
+            </thead>
+            <tbody  *ngFor = "let obsinger of array_of_singer" >
+                
+                    <tr *ngIf = "(obsinger.noOfSongs>50)">
                 
                 <td>{{obsinger.NameOfSinger}}</td>
                 <td>{{obsinger.noOfSongs}}</td>
-                </div>
-                </div>
+                
+                
                 </tr>
+            </tbody>
             </table>
-        
+        </div> 
 
