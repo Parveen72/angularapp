@@ -1,0 +1,46 @@
+<p>my-login works!</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-center rounded shadow py-8 " style="height:450px ; background-color:beige ;">
+            <form #myForm="ngForm" (ngSubmit)="OnSubmit(myForm)">
+                <h2 >Sing in</h2>
+                <!-- <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle-thin fa-stack-2x" ></i>
+                    <i class="fa fa-stack-1x"></i>
+                    <i class="fa fa-google-plus"></i>
+                  </span>
+                  <span class="fa-stack">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <i class="fa fa-linkedin"  fa-stack-1x></i>
+                  </span>
+                  <span class="fa-stack">
+                    <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x"></i>
+                  </span> -->
+            <div class="icon">
+            <ul>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            </ul>
+            </div>
+            
+            <input class="in" type="text" placeholder="User Email"><br><br>
+            <input class="in" type="password" placeholder="Password"><br><br>
+            
+            <p>Forgot your password?</p>
+            <button>SING IN</button>
+         </form>
+        </div>
+        <div class="col-md-4 text-center rounded shadow py-8 " style="background-color:rgb(183, 238, 238);">
+            <form #myForm="ngForm" (ngSubmit)="OnSubmit(myForm)">
+                <div class="up">
+                <h2>Sing up</h2>
+                <p>Sing up here if you dont have account</p>
+                <button>SING UP</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
